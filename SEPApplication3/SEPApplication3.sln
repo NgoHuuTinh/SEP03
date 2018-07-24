@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEPApplication3", "SEPApplication3\SEPApplication3.csproj", "{70F816BD-D605-4B71-851E-794D2E2C35D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEPApplication3.Tests", "SEPApplication3.Tests\SEPApplication3.Tests.csproj", "{0910BF81-D6A1-4E89-826F-B46BBF45E28D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70F816BD-D605-4B71-851E-794D2E2C35D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F816BD-D605-4B71-851E-794D2E2C35D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F816BD-D605-4B71-851E-794D2E2C35D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F816BD-D605-4B71-851E-794D2E2C35D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0910BF81-D6A1-4E89-826F-B46BBF45E28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0910BF81-D6A1-4E89-826F-B46BBF45E28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0910BF81-D6A1-4E89-826F-B46BBF45E28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0910BF81-D6A1-4E89-826F-B46BBF45E28D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24E0A02D-B0D4-40CA-AB83-598BFD7B8C14}
+	EndGlobalSection
+EndGlobal
