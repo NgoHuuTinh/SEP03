@@ -34,6 +34,8 @@ namespace SEPApplication3.Connect
     }
     public class Connect_API
     {
+        private string url = "http://125.234.238.137:8080/CMU/SEPAPI/SEP21"; // At Home
+        // private string url = "http://cntttest.vanlanguni.edu.vn:8080/CMU/SEPAPI/SEP21"; // At School
         public LoginResult Login(string username, string password)
         {
             using (var client = new WebClient())
@@ -41,7 +43,7 @@ namespace SEPApplication3.Connect
                 var form = new NameValueCollection();
                 form["Username"] = username;
                 form["Password"] = password;
-                var result = client.UploadValues("http://cntttest.vanlanguni.edu.vn:8080/CMU/SEPAPI/SEP21/Login", "POST", form);
+                var result = client.UploadValues(url + "/Login", "POST", form);
                 var json = Encoding.UTF8.GetString(result);
                 return JsonConvert.DeserializeObject<LoginResult>(json);
             }    
@@ -51,7 +53,7 @@ namespace SEPApplication3.Connect
         {
             using (var client = new WebClient())
             {
-                var json = client.DownloadString("http://cntttest.vanlanguni.edu.vn:8080/CMU/SEPAPI/SEP21/" + "/GetCourses?lecturerID=" + lecturerID);
+                var json = client.DownloadString(url + "/GetCourses?lecturerID=" + lecturerID);
                 return JsonConvert.DeserializeObject<GetCourseResult>(json);
             }
         }

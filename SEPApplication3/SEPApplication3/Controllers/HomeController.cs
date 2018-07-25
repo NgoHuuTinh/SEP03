@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using SEPApplication3.Connect;
 namespace SEPApplication3.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            return View();
+            var connection = new Connect_API();
+            var model = connection.GetCourse("ND");
+            return View(model.Data);
         }
 
         public ActionResult About()

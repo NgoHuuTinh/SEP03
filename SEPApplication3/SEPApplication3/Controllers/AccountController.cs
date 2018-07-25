@@ -13,7 +13,7 @@ using SEPApplication3.Models;
 
 namespace SEPApplication3.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -400,7 +400,10 @@ namespace SEPApplication3.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Session["Email"] = null;
+            Session["ID"] = null;
+            Session["Secret"] = null;
+            AuthenticationManager.SignOut();
             return RedirectToAction("Index", "Home");
         }
 
