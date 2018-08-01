@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SEPApplication3",
+    "\\SEPApplication3\\SEPApplication3",
+    "\\SEPApplication3\\SEPApplication3\\Controllers",
+    "\\SEPApplication3\\SEPApplication3\\Views"
   ],
+  "SelectedNode": "\\SEPApplication3\\SEPApplication3.sln",
   "PreviewInSolutionExplorer": false
 }
