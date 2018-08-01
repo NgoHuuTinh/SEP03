@@ -32,10 +32,38 @@ namespace SEPApplication3.Connect
         public CourseData[] Data { get; set; }
         public string Message { get; set; }
     }
+    public class StudentData
+    {
+        public string Id { get; set; }
+        public string Fullname { get; set; }
+        public DateTime Birthday { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+    }
+    public class GetStudentResult
+    {
+        public int Code { get; set; }
+        public StudentData[] Data { get; set; }
+        public string Message { get; set; }
+    }
+    public class MemberData
+    {
+        public string Id { get; set; }
+        public string Fullname { get; set; }
+        public DateTime Birthday { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+    }
+    public class GetMemberResult
+    {
+        public int Code { get; set; }
+        public string Message { get; set; }
+        public MemberData[] Data { get; set; }
+    }
     public class Connect_API
     {
         private string url = "http://125.234.238.137:8080/CMU/SEPAPI/SEP21"; // At Home
-        // private string url = "http://cntttest.vanlanguni.edu.vn:8080/CMU/SEPAPI/SEP21"; // At School
+        //private string url = "http://cntttest.vanlanguni.edu.vn:8080/CMU/SEPAPI/SEP21"; // At School
         public LoginResult Login(string username, string password)
         {
             using (var client = new WebClient())
@@ -49,13 +77,40 @@ namespace SEPApplication3.Connect
             }    
         }
 
-        public GetCourseResult GetCourse(string lecturerID)
+        public GetCourseResult GetCourse(string lecturerId)
         {
             using (var client = new WebClient())
             {
-                var json = client.DownloadString(url + "/GetCourses?lecturerID=" + lecturerID);
+                var json = client.DownloadString(url + "/GetCourses?lecturerID=" + lecturerId);
                 return JsonConvert.DeserializeObject<GetCourseResult>(json);
             }
         }
+
+        public GetStudentResult GetStudent(string code)
+        {
+            using (var client = new WebClient())
+            {
+                var json = client.DownloadString(url + "/GetStudent?code=" + code);
+                return JsonConvert.DeserializeObject<GetStudentResult>(json);
+            }
+        }
+
+        //public GetStudentResult GetStudent(string code)
+        //{
+        //    using (var client = new WebClient())
+        //    {
+        //        var json = client.DownloadString(url + "/GetStudent?code=" + code);
+        //        return JsonConvert.DeserializeObject<GetStudentResult>(json);
+        //    }
+        //}
+
+        //public GetMemberResult GetMembers(string courseID)
+        //{
+        //    using (var client = new WebClient())
+        //    {
+        //        var json = client.DownloadString(url + "/GetMembers?courseID=" + courseID);
+        //        return JsonConvert.DeserializeObject<GetMemberResult>(json);
+        //    }
+        //}
     }
 }
