@@ -198,9 +198,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Connect\Connect_API.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SessionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -316,11 +316,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
-    <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
-    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Sessions\Create.cshtml" />
+    <Content Include="Views\Sessions\Delete.cshtml" />
+    <Content Include="Views\Sessions\Details.cshtml" />
+    <Content Include="Views\Sessions\Edit.cshtml" />
+    <Content Include="Views\Sessions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

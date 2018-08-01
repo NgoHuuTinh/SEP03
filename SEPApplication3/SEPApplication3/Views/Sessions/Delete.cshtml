@@ -1,4 +1,4 @@
-﻿@model SEPApplication3.Models.Course
+﻿@model SEPApplication3.Models.Session
 
 @{
     ViewBag.Title = "Delete";
@@ -8,23 +8,15 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Course</h4>
+    <h4>Session</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Code)
+            @Html.DisplayNameFor(model => model.Date)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Code)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Date)
         </dd>
 
         <dt>
@@ -36,11 +28,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Lecturer)
+            @Html.DisplayNameFor(model => model.Course.Code)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Lecturer)
+            @Html.DisplayFor(model => model.Course.Code)
         </dd>
 
     </dl>
