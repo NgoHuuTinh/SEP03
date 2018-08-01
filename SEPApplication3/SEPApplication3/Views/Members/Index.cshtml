@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SEPApplication3.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table>
+    <tr>
+        <th>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <p>
+                @Html.ActionLink("Sync", "Sync")
+            </p>
+        </th>
+    </tr>
+</table>
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.Code)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fullname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Code)
+            </td>
+
+        </tr>
+    }
+
+</table>

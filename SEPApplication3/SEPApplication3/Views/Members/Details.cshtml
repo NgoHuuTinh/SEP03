@@ -1,4 +1,4 @@
-﻿@model SEPApplication3.Models.Course
+﻿@model SEPApplication3.Models.Member
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Course</h4>
+    <h4>Member</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,27 +19,27 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Fullname)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Fullname)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Info)
+            @Html.DisplayNameFor(model => model.Birthday)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Info)
+            @Html.DisplayFor(model => model.Birthday)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Lecturer)
+            @Html.DisplayNameFor(model => model.Course.Code)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Lecturer)
+            @Html.DisplayFor(model => model.Course.Code)
         </dd>
 
     </dl>
